@@ -144,6 +144,17 @@ to give a realistic pile effect */
     animation-delay: 3900ms;     
 }
 
+/* class for placed cards to drop in */
+
+.dropIn {
+
+    animation-name: dropIn;
+    animation-fill-mode: both;
+    animation-duration: 1000ms;
+    animation-fill-mode: both;
+
+}
+
 .jigglyPoo {
     
     /* cursor: pointer; */

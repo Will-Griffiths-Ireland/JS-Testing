@@ -1,5 +1,34 @@
-//Purely just testing things out
 
+//function that creates card at click location
+
+window.onclick = function(e)
+{
+    console.log("clicked ");
+    console.log(e.clientX);
+    console.log(e.clientY);
+    console.log(e.target);
+    console.log( document.elementFromPoint(e.clientX, e.clientY));
+    
+    placeCard(e.clientY, e.clientX);
+}
+
+function placeCard(x,y){
+    let body = document.querySelector('body');
+    let locX = x - 50;
+    locX = locX + "px";
+    let locY = y - 50;
+    locY = locY + "px";
+    console.log("trying to create card at " + locX + " " + locY);
+    let card = document.createElement('img');
+    card.src = "assets/images/full_combined_deck/black_backface_named.webp";
+    card.style.position = "fixed";
+    card.style.top = locX;
+    card.style.left = locY;
+    card.style.width = "100px";
+    card.classList = "dropIn cardHere"; 
+
+    body.appendChild(card);
+}
 
 // function that adds a class to the card elements, this causes them to jiggly via css animations
 
@@ -24,10 +53,10 @@ const cardFaceData = () => [
 
 let tempDeck = cardFaceData();
 
-function cardJiggle(){
+function cardJiggle(e){
     console.log("add jiggle");
-    event.target.classList.add("jigglyPoo");
-    let targMe = event.target;
+    e.target.classList.add("jigglyPoo");
+    let targMe = e.target;
     console.log(targMe);
     
     const myTimeout = setTimeout(myGreeting, 1500);
