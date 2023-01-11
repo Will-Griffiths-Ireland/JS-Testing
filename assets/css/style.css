@@ -1,0 +1,198 @@
+*{
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+body{
+    background-color: #000;
+    margin: 0;
+    /* Setting a custom cursor */
+    /* cursor:url(../images/cursor.cur), pointer; */
+    box-sizing: border-box;
+    border: 0;
+}
+ img {
+    
+    /* This filter to add drop shadows gives the cards some definition in stacks so that colors dor not blend into one.
+    The advantage over a border is that this conforms to the actual image border and ignores transparency */
+    
+    filter: drop-shadow(0px 0px 1px #000);
+} 
+
+/* Styling that facilitates the dropping in of cards from above using both scale and opacity, along with minor rotation
+to give a realistic pile effect */
+
+
+#c10 {
+    position: absolute;
+    top: 25vh;
+    left: 25vw;
+    rotate: -1deg;
+    width: 20%;
+    z-index: 5;
+    animation-name: dropIn;
+    animation-fill-mode: both;
+    animation-duration: 100ms;
+    animation-delay: 3s;  
+}
+
+#c2 {
+    position: absolute;
+    top: 25vh;
+    left: 25vw;
+    rotate: 2deg;
+    width: 20%;
+    z-index: 6;
+    animation-name: dropIn;
+    animation-fill-mode: both;
+    animation-duration: 100ms;
+    animation-delay: 3100ms;     
+}
+#c3 {
+    position: absolute;
+    top: 25vh;
+    left: 25vw;
+    rotate: 0deg;
+    width: 20%;
+    z-index: 7;
+    animation-name: dropIn;
+    animation-fill-mode: both;
+    animation-duration: 100ms;
+    animation-delay: 3200ms;     
+}
+#c4 {
+    position: absolute;
+    top: 25vh;
+    left: 25vw;
+    rotate: -2deg;
+    width: 20%;
+    z-index: 8; 
+    animation-name: dropIn;
+    animation-fill-mode: both;
+    animation-duration: 100ms;
+    animation-delay: 3300ms;    
+}
+#c5 {
+    position: absolute;
+    top: 25vh;
+    left: 25vw;
+    rotate: 1.5deg;
+    width: 20%;
+    z-index: 9;
+    animation-name: dropIn;
+    animation-fill-mode: both;
+    animation-duration: 100ms;
+    animation-delay: 3400ms;     
+}
+#c6 {
+    position: absolute;
+    top: 25vh;
+    left: 25vw;
+    rotate: -.5deg;
+    width: 20%;
+    z-index: 10;
+    animation-name: dropIn;
+    animation-fill-mode: both;
+    animation-duration: 100ms;
+    animation-delay: 3500ms;     
+}
+#c7 {
+    position: absolute;
+    top: 25vh;
+    left: 25vw;
+    rotate: 1.4deg;
+    width: 20%;
+    z-index: 11;
+    animation-name: dropIn;
+    animation-fill-mode: both;
+    animation-duration: 100ms;
+    animation-delay: 3600ms;     
+}
+#c8 {
+    position: absolute;
+    top: 25vh;
+    left: 25vw;
+    rotate: 0.2deg;
+    width: 20%;
+    z-index: 12;
+    animation-name: dropIn;
+    animation-fill-mode: both;
+    animation-duration: 100ms;
+    animation-delay: 3700ms;     
+}
+#c9 {
+    position: absolute;
+    top: 25vh;
+    left: 25vw;
+    rotate: -1deg;
+    width: 20%;
+    z-index: 13;
+    animation-name: dropIn;
+    animation-fill-mode: both;
+    animation-duration: 100ms;
+    animation-delay: 3800ms;     
+}
+#c1 {
+    position: absolute;
+    top: 25vh;
+    left: 25vw;
+    rotate: 0deg;
+    width: 20%;
+    z-index: 14;
+    animation-name: dropIn;
+    animation-fill-mode: both;
+    animation-duration: 1000ms;
+    animation-delay: 3900ms;     
+}
+
+.jigglyPoo {
+    
+    /* cursor: pointer; */
+    animation-name: cardSpin;
+    border-width: 1vw;
+    border-style: solid;
+    border-color: chartreuse;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes dropIn{
+    0%{ transform: scale(3);
+    opacity: 0;}
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+@keyframes cardSpin{
+    0%{}
+    100%{
+        transform: rotate3d(1, 1, 1, 360deg);
+    }
+}
+@keyframes cardJiggle{
+    0%{
+    }
+    20%{
+        
+        transform: rotate(-1.5deg);
+    }
+    40%{
+        
+        transform: rotate(3deg);
+    }
+    60%{
+        
+        transform: rotate(-1.5deg);
+    }
+    80%{
+        
+        transform: rotate(3deg);
+    }
+    100%{
+        
+        transform: rotate(-1.5deg); 
+    }
+}
