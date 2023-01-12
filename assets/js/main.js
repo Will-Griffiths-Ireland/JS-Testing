@@ -33,6 +33,7 @@ function placeCard(x,y){
     
 }
 
+//global variablke that tracks audi clips generated
 let audioCounter  = 0;
 
 function playAudio(audioName){
