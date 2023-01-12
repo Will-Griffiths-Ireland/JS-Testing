@@ -14,17 +14,50 @@ window.onclick = function(e)
 
 function placeCard(x,y){
     let body = document.querySelector('body');
-    let locX = x - 50;
+    let locX = x - 100;
     locX = locX + "px";
-    let locY = y - 50;
+    let locY = y - 100;
     locY = locY + "px";
     console.log("trying to create card at " + locX + " " + locY);
     let card = document.createElement('img');
-    card.src = "assets/images/full_combined_deck/black_backface_named.webp";
+    let randSelect = Math.floor(Math.random() * 7);
+    if(randSelect == 1)
+    {
+        card.src = "assets/images/full_combined_deck/black_backface_named.webp";
+    }
+    else if(randSelect == 2)
+    {
+        card.src = "assets/images/full_combined_deck/red_backface_named.webp";
+    }
+    else if(randSelect == 3)
+    {
+        card.src = "assets/images/full_combined_deck/green_backface_named.webp";
+    }
+    else if(randSelect == 4)
+    {
+        card.src = "assets/images/full_combined_deck/purple_backface_named.webp";
+    }
+    else if(randSelect == 5)
+    {
+        card.src = "assets/images/full_combined_deck/blue_backface_named.webp";
+    }
+    else if(randSelect == 6)
+    {
+        card.src = "assets/images/full_combined_deck/brown_backface_named.webp";
+    }
+    else if(randSelect == 7)
+    {
+        card.src = "assets/images/full_combined_deck/orange_backface_named.webp";
+    }
+    else
+    {
+        card.src = "assets/images/full_combined_deck/white_backface_named.webp";
+    }
     card.style.position = "fixed";
     card.style.top = locX;
     card.style.left = locY;
-    card.style.width = "100px";
+    card.style.width = "200px";
+    card.style.zIndex = 50;
     card.classList = "dropIn cardHere"; 
 
     body.appendChild(card);
@@ -68,6 +101,8 @@ const cardFaceData = () => [
 ];
 
 let tempDeck = cardFaceData();
+
+console.log(tempDeck);
 
 function cardJiggle(e){
     console.log("add jiggle");

@@ -1,12 +1,14 @@
 *{
     overflow-y: hidden;
     overflow-x: hidden;
+     /* Setting a custom cursor */
+    cursor:url(../images/full_combined_deck/cursor.png), pointer;
 }
 body{
     background-color: #000;
     margin: 0;
-    /* Setting a custom cursor */
-    /* cursor:url(../images/cursor.cur), pointer; */
+   
+    
     box-sizing: border-box;
     border: 0;
 }
