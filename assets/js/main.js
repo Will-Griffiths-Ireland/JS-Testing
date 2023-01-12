@@ -28,6 +28,22 @@ function placeCard(x,y){
     card.classList = "dropIn cardHere"; 
 
     body.appendChild(card);
+    // document.getElementById('sound_test').play();
+    playAudio();
+    
+}
+
+let audioCounter  = 0;
+
+function playAudio(audioName){
+
+    let audioId = "audio" + audioCounter;
+    audioCounter += 1;
+    let sound = document.createElement('audio');
+    sound.src = "assets/audio/test_beep_500ms.mp3";
+    sound.id = audioId;
+    document.querySelector('body').appendChild(sound);
+    document.getElementById(audioId).play();
 }
 
 // function that adds a class to the card elements, this causes them to jiggly via css animations
